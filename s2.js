@@ -62,8 +62,8 @@ function quizGrader(grade) {
 document.getElementById("checker").addEventListener("click", gradeCheck);
 
 function quiz() {
-    let q1 = "What tag is used for Javascript?".toLowerCase();
-    let q2 = "What is the Javascript file extension?".toUpperCase();
+    let q1 = "What tag is used for Javascript?";
+    let q2 = "What is the Javascript file extension?";
     let q3 = "How do you create a variable that doesn't change?";
     let a1 = "script";
     let a2 = ".js";
@@ -71,16 +71,26 @@ function quiz() {
 
     let score = 0;
 
-    if (prompt(q1).toLowerCase == a1) {
+    let ua1 = prompt(q1);
+    let ua2 = prompt(q2);
+    let ua3 = prompt(q3);
+
+    if (ua1 == a1) {
         // score++;
         // score += 1;
         score = score + 1;
+    } else {
+        alert("Your answer: " + ua1 + " Correct answer: " + a1);
     }
-    if (prompt(q2) == a2) {
+    if (ua2 == a2) {
         score++;
+    } else {
+        alert("Your answer: " + ua2 + " Correct answer: " + a2);
     }
-    if (prompt(q3) == a3) {
+    if (ua3 == a3) {
         score += 1;
+    } else {
+        alert("Your answer: " + ua3 + " Correct answer: " + a3);
     }
 
     quizGrader((score / 3) * 100);
