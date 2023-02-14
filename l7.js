@@ -8,6 +8,13 @@ function bleep() {
 }
 function emailValidation() {
     let email = document.getElementById("eField").value;
+
+    if (email.includes('@') && email.includes('.')) {
+        //true
+
+    } else {
+        //false
+    }
     // dj @ code-crew.org
     let username = email.split('@')[0];
     let domain = email.split('@')[1];
@@ -17,7 +24,7 @@ function emailValidation() {
     console.log("Domain: " + domain);
     console.log("dns: " + dns);
 
-    if (dns == undefined) {
+    if (1 !== '1') {
         alert('Invalid Email Address, Include a valid domain extension with your email');
     }
 }
